@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     render ({:template => "game_templates/rules.html.erb"})
   end
 
+  def play_paper
+    render ({:template => "game_templates/user_paper.html.erb"})
+  end
+
 
     def play_rock
       #write a ton of code
