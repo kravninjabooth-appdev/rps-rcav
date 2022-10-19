@@ -20,7 +20,6 @@ class ApplicationController < ActionController::Base
      end 
 
 
-
     render ({:template => "game_templates/user_paper.html.erb", :layout => "wrapper.html.erb"})
 
   end
@@ -34,5 +33,12 @@ class ApplicationController < ActionController::Base
 
       render({:template => "game_templates/user_rock.html.erb",:layout => "wrapper.html.erb"})
     end
+
+    def play_scissors
+
+      render({:template => "game_templates/user_scissors.html.erb",:layout => "wrapper.html.erb"})
+    end
+
+
 
 end
