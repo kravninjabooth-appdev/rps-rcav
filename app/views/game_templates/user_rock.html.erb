@@ -1,7 +1,16 @@
 <h1>We played rock!</h1>
 
-<% ["rock", "paper", "scissors"].sample %>
+<% comp_move = ["rock", "paper", "scissors"].sample %>
 
 <h1>
-  They played <%= 6*7%>
+  They played <%= comp_move %>
 </h1>
+
+<% if comp_move =="rock"%>
+  tie
+<% elsif comp_move == "paper" %>
+  lost
+
+<% elsif comp_move == "scissors"%>
+  won
+end
