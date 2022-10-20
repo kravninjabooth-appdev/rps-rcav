@@ -41,7 +41,7 @@ class ApplicationController < ActionController::Base
       elsif @comp_move == "paper" 
        @outcome = "lost"
       elsif @comp_move == "scissors"
-       @outcome = "tie"
+       @outcome = "tied"
       end 
 
       render({:template => "game_templates/user_scissors.html.erb",:layout => "wrapper.html.erb"})
