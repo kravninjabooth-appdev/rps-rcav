@@ -24,7 +24,6 @@ class ApplicationController < ActionController::Base
 
   end
 
-
     def play_rock
       #write a ton of code
       #redirect_to("https://www.wikipedia.org")
@@ -35,6 +34,15 @@ class ApplicationController < ActionController::Base
     end
 
     def play_scissors
+      @comp_move = ["rock", "paper", "scissors"].sample 
+    
+      if @comp_move =="rock"
+       @outcome = "won"
+      elsif @comp_move == "paper" 
+       @outcome = "lost"
+      elsif @comp_move == "scissors"
+       @outcome = "tie"
+      end 
 
       render({:template => "game_templates/user_scissors.html.erb",:layout => "wrapper.html.erb"})
     end
